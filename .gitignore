@@ -1,5 +1,5 @@
 qc_outputs/
-data_ejemplo/_backup/
+example_data/_backup/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
