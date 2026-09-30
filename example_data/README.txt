@@ -1,8 +1,9 @@
-Example SWE files only
-----------------------
-Quebrada Larga (04520006): QUEBRADA_LARGA_SWE.csv  — default STATION_ID in notebook
-Portillo (05401007):       PORTILLO_SWE.csv       — set STATION_ID = "05401007" to run
+Example SWE files (pre–quality control)
+-----------------------------------------
+Portillo (05401007):       PORTILLO_SWE.csv       — default in notebook
+Quebrada Larga (04520006): QUEBRADA_LARGA_SWE.csv — set station_id = "04520006"
 
-Columns: date, min, media, max (DGA automatic).
+Unprocessed DGA automatic exports (date, min, media, max).
+Cleaned output: ../qc_outputs/
 
-SD-based QC is not included here; see ElNiño_2026/cleaning_script for the full pipeline.
+SD-based QC is documented in ElNiño_2026/cleaning_script/.

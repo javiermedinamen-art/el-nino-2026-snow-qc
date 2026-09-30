@@ -1,9 +1,14 @@
 # SWE quality control — El Niño 2026 (UPLA)
 
-**`Snow_QC_Reproducible.ipynb`** — SWE-only cleaning (MAD spikes + smooth). Snow-depth steps live in the main project (`../cleaning_script/`).
+Supplementary notebook for automatic SWE cleaning (DGA `min`, `media`, `max`).
 
-- **`example_data/`** — Quebrada Larga and Portillo SWE CSVs (no SD files in this repo).
-- **`QC_PARAMETERS.csv`** — parameter table for the supplement.
+| Item | Location |
+|------|----------|
+| Notebook | `Snow_QC_Reproducible.ipynb` |
+| Example SWE | `example_data/` (Portillo default, Quebrada Larga) |
+| Parameters | `QC_PARAMETERS.csv` |
+
+SD-related processing is documented in `../cleaning_script/` on the full `ElNiño_2026` project.
 
 ```bash
 pip install -r requirements.txt
