@@ -1,10 +1,15 @@
-Portillo (DGA station 05401007)
--------------------------------
-Files: PORTILLO_SWE.csv, PORTILLO_SD.csv
+Example station files (El Niño 2026 brief report)
+-------------------------------------------------
 
-Same daily files used in the UPLA / Glacies El Niño 2026 brief report (Aconcagua basin).
-SWE columns: min, media, max (pillow). SD: SD_mean_clean, SD_mean_raw.
+Quebrada Larga (04520006) — default in the notebook
+  QUEBRADA_LARGA_SWE.csv, QUEBRADA_LARGA_SD.csv
+  Includes 2026 pillow SWE vs snow-depth QC.
 
-Run the notebook from the parent folder without the full ElNiño_2026 tree.
-If you have the full project, the notebook should pick up ../Data/Station_SWE and
-../Data/Station_SnowDepth automatically.
+Portillo (05401007)
+  PORTILLO_SWE.csv, PORTILLO_SD.csv
+  Set STATION_ID = "05401007" in the config cell to run this one.
+
+SWE: min, media, max. SD: SD_mean_clean, SD_mean_raw.
+
+Run from snow_qc_github/ without the full ElNiño_2026 tree.
+With the full project, the notebook uses ../Data/Station_SWE and ../Data/Station_SnowDepth.
