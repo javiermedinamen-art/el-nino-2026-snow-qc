@@ -1,0 +1,31 @@
+table,parameter,station_id,station_name,value,units,notes
+swe_physical_max,max_swe_mm,04520006,Quebrada Larga,3500,mm,Values above set to missing before spike detection
+swe_physical_max,max_swe_mm,05401007,Portillo,1200,mm,
+swe_physical_max,max_swe_mm,05703009,Laguna Negra,3000,mm,
+swe_physical_max,max_swe_mm,06020001,Termas del Flaco,1200,mm,
+swe_physical_max,max_swe_mm,07301000,Lo Aguirre,1200,mm,
+swe_mad_spike,fwindow,default,All SWE stations,3,days,Half-window; rolling window size = 2*fwindow+1 (7 days)
+swe_mad_spike,k_mad,default,All SWE stations,4.0,dimensionless,MAD z-score threshold for isolated spike
+swe_mad_spike,abs_thr_mm,default,All SWE stations,100,mm,Alternate spike rule: |ΔSWE| to prev and next day both > threshold
+swe_mad_spike,smooth_window,default,All SWE stations,3,days,Centered rolling median after spike removal; gaps interpolated up to 2 days
+swe_mad_spike,fwindow,05401007,Portillo,3,days,Portillo override (pillow)
+swe_mad_spike,k_mad,05401007,Portillo,3.5,dimensionless,Portillo override
+swe_mad_spike,abs_thr_mm,05401007,Portillo,75,mm,Portillo override
+swe_mad_spike,smooth_window,05401007,Portillo,9,days,Portillo override
+swe_clip,lower_bound,default,All SWE stations,0,mm,Negative SWE clipped to 0 after cleaning
+quebrada_swe_qc,qc_years,04520006,Quebrada Larga,2026,year,Rule set applied only in listed years
+quebrada_swe_qc,swe_limit_mm,04520006,Quebrada Larga,3500,mm,Reject if |SWE| exceeds limit
+quebrada_swe_qc,sd_min_cm,04520006,Quebrada Larga,50,cm,Reject if same-day SD missing or SD < limit
+quebrada_swe_qc,ratio_min,04520006,Quebrada Larga,0.05,mm/cm,SWE/SD when SD >= 10 cm
+quebrada_swe_qc,ratio_max,04520006,Quebrada Larga,12.5,mm/cm,SWE/SD when SD >= 10 cm
+quebrada_swe_qc,shallow_sd_min_cm,04520006,Quebrada Larga,5,cm,Shallow-pack rule lower SD bound
+quebrada_swe_qc,shallow_sd_max_cm,04520006,Quebrada Larga,10,cm,Shallow-pack rule upper SD bound (exclusive)
+quebrada_swe_qc,shallow_swe_max_mm,04520006,Quebrada Larga,40,mm,Reject if 5 <= SD < 10 cm and SWE > limit
+laguna_sd_qc,prev_depth_min_cm,05703009,Laguna Negra,50,cm,Prior valid SD (ffill up to 3 days) above this
+laguna_sd_qc,ffill_limit_days,05703009,Laguna Negra,3,days,Gap-fill limit when testing previous depth
+laguna_sd_qc,rule,05703009,Laguna Negra,abrupt_zero,,Set SD_mean_clean (and raw if 0) to missing when SD=0 after deep pack
+sd_baseline,source,all,All SD stations,Caro et al. 2026,,Historical SD from Southern Andes Snow Depth Dataset; 2026 from DGA exports
+sd_baseline,additional_qc,05703009,Laguna Negra,abrupt_zero,,Only extra SD QC in this study besides dataset + 2026 append
+swe_sd_align,min_sd_cm,default,All SWE stations,2,cm,SWE forced to 0 when 7-day max SD below threshold
+swe_sd_align,gate_days,default,All SWE stations,7,days,Centered rolling max SD for alignment gate
+swe_sd_align,infill_max_gap_days,default,All SWE stations,7,days,Linear infill of brief SWE=0 gaps during accumulation
