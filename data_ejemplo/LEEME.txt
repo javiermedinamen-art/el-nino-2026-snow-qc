@@ -5,6 +5,8 @@ Archivos: PORTILLO_SWE.csv, PORTILLO_SD.csv
 Son los mismos que usamos en la comunicación El Niño 2026 (cuenca Aconcagua).
 SWE: min / media / max diarios (almohada). SD: SD_mean_clean y SD_mean_raw.
 
-Sirven para correr el notebook sin bajar todo el proyecto ElNiño_2026.
-Si tiene el proyecto completo, apunte las rutas a Data/Station_SWE y
-Data/Station_SnowDepth en la primera celda de código.
+Sirven para correr el notebook desde esta carpeta (snow_qc_github) sin
+depender del resto del repo.
+
+Si trabaja dentro de ElNiño_2026, el notebook debería encontrar solo
+../Data/Station_SWE y ../Data/Station_SnowDepth.
