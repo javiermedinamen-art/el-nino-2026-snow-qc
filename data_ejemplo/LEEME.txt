@@ -1,0 +1,10 @@
+Portillo (DGA 05401007)
+-----------------------
+Archivos: PORTILLO_SWE.csv, PORTILLO_SD.csv
+
+Son los mismos que usamos en la comunicación El Niño 2026 (cuenca Aconcagua).
+SWE: min / media / max diarios (almohada). SD: SD_mean_clean y SD_mean_raw.
+
+Sirven para correr el notebook sin bajar todo el proyecto ElNiño_2026.
+Si tiene el proyecto completo, apunte las rutas a Data/Station_SWE y
+Data/Station_SnowDepth en la primera celda de código.

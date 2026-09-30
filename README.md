@@ -1,14 +1,12 @@
-# Automatic snow data quality control (UPLA El Niño 2026)
+# Depuración SWE / SD — comunicación El Niño 2026 (UPLA)
 
-Publication disclosure for daily **snow depth (SD)** and **snow water equivalent (SWE)** cleaning applied in the El Niño 2026 Brief Report. Machine-readable parameters: `QC_PARAMETERS.csv`.
+Parámetros en `QC_PARAMETERS.csv`. Cuaderno: [`Snow_QC_Reproducible.ipynb`](Snow_QC_Reproducible.ipynb) (markdown + código).
 
-## Reproducible notebook (reviewers)
+**Datos de prueba:** `data_ejemplo/` trae **Portillo** (05401007), la misma estación que usamos en el manuscrito. Clonar el repo, `pip install -r requirements.txt`, abrir el notebook y ejecutar (deja `USAR_EJEMPLO = True` implícito si detecta esos CSV). Salida en `qc_outputs/` sin pisar los archivos de ejemplo.
 
-**Start here:** [`Snow_QC_Reproducible.ipynb`](Snow_QC_Reproducible.ipynb) — single file with markdown + all QC code. Run from the repository root (needs `Data/Station_SWE/` and `Data/Station_SnowDepth/`). Install deps: `pip install -r cleaning_script/requirements.txt`.
+Con el proyecto completo `ElNiño_2026`, el notebook usa `Data/Station_SWE/` y `Data/Station_SnowDepth/`.
 
-Set `WRITE_FILES = False` in the notebook to write only to `cleaning_script/qc_outputs/` without modifying `Data/`.
-
-**Legacy reference:** full multi-basin workflow in `Depuracion_SD.ipynb` (internal). The Python scripts below mirror the notebook and are used in `analysis/scripts/00_run_pipeline.py`.
+Los `.py` de acá son el mismo flujo que corre `run_all_qc.py` / el pipeline de análisis. `Depuracion_SD.ipynb` es un flujo más largo (otras cuencas) que no entra tal cual al comunicado.
 
 ## Run order (matches `analysis/scripts/00_run_pipeline.py`)
 
