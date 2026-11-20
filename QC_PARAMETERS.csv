@@ -1,6 +1,6 @@
 table,parameter,station_id,station_name,value,units,notes
 swe_physical_max,max_swe_mm,04520006,Quebrada Larga,3500,mm,Values above set to missing before spike detection
-swe_physical_max,max_swe_mm,05401007,Portillo,1200,mm,
+swe_physical_max,max_swe_mm,05401007,Portillo,2000,mm,Raised for 2026 spring pack (Oct peak ~1705 mm)
 swe_physical_max,max_swe_mm,05703009,Laguna Negra,3000,mm,
 swe_physical_max,max_swe_mm,06020001,Termas del Flaco,1200,mm,
 swe_physical_max,max_swe_mm,07301000,Lo Aguirre,1200,mm,

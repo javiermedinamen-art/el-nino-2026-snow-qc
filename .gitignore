@@ -1,5 +1,6 @@
-qc_outputs/
-example_data/_backup/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+figures/
+outputs/
+.DS_Store
